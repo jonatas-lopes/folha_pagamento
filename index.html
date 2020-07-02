@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+    <head>
+        <title>Simulador de Folha de pagamento</title>
+        <meta charset="utf-8" lang="pt-br">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-ligth">
+            <a class="navbar-brand" href="#">
+                <img src="img/ave.jpg" class="rounded-circle"width="60px" height="60px">
+            </a>
+                
+            
+                <div class="#" id="home">
+                    <h5>Simulador de Folha de pagamento</h5>
+                </div>   
+        </nav>
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">Simulação de folha de pagamento</h1>
+              <p class="lead">Simule a montagem de uma folha de pagamento.</p>
+            </div>
+          </div>
+          <br><br> 
+        <div class="container" style="max-width: 800px">
+           <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 style="margin: 6px 0;">Cadastro de pessoa</h3>
+    </div>
+    <div class="panel-body">
+         
+            <div class="row" style="margin-top: 10px">
+                <div class="col-sm-12">
+                    <label for="nome">Nome</label>
+                    <input type="text" required name=nome class="form-control" name="nome" id="nome" value="">
+                </div>
+                <div class="col-sm-12">
+                    <label for="cpf">CPF</label>
+                    <input type="text" required name=cpf class="form-control" name="cpf" id="cpf" value="">
+                </div>
+                <div class="col-sm-12">
+                    <label for="Sexo">Sexo</label>
+                    <input type="text" required name=sexo class="form-control" name="sexo" id="sexo" value="">
+                </div>
+            </div>
+            <div class="row" style="margin-top: 10px">
+                <div class="col-sm-12">
+                    <label for="data">Data de admissão</label>
+                    <input type="date" required name=data class="form-control" name="data" id="data" value="">
+                </div>
+            </div>
+            <div class="row" style="margin-top: 10px">
+                <div class="col-sm-12">
+                    <label for="cargo">Cargo</label>
+                    <input type="text" required name=cargo class="form-control" name="cargo" id="cargo" value="">
+                </div>
+            </div>
+            <div class="row" style="margin-top: 10px">
+                <div class="col-sm-12">
+                    <label for="escala">Escala</label>
+                    <input type="text" required name=escala class="form-control" name="escala" id="escala" value="">
+                </div>
+            </div>
+            <div class="row" style="margin-top: 10px">
+                <div class="col-sm-12">
+                    <label for="contrato">Tipo de contrato</label>
+                    <input type="text" required name=contrato class="form-control" name="contrato" id="contrato" value="">
+                </div>
+            </div>
+            <div class="row" style="margin-top: 10px">
+                <div class="col-sm-12">
+                    <label for="tipo">Tipo de admissao</label>
+                    <input type="text" required name=tipo class="form-control" name="tipo" id="tipo" value="">
+                </div>
+            </div>
+            <div class="row" style="margin-top: 10px">
+                <div class="col-sm-12">
+                    <label for="carteira">Carteira de trabalho</label>
+                    <input type="text" required name=carteira class="form-control" name="carteira" id="carteira" value="">
+                </div>
+            </div>
+                
+            
+            
+                    
+            
+            <div class="row" style="margin-top: 15px">
+                <div class="col-sm-12">
+                    <button onclick="getcube()" class="btn btn-primary">Salvar</button>
+                    
+                </div>
+            </div>
+        
+    </div>
+</div> 
+                        
+            
+            
+        </div>
+        <br><br>
+        
+
+        <footer>
+
+            <div class="container-fluid footer text-center margin">
+                <p>Desenvolvido por Jonatas Boldrin</p:>
+                <a class="nav-link" href="#home">Voltar ao inicio</a>
+            </div>
+         
+        </footer>
+
+    </body>
+</html>
+
+
+<script type="text/javascript">  
+    function getcube(){  
+    var nome= document.getElementById("nome").value;  
+    var cpf= document.getElementById("cpf").value;  
+    alert(nome);  
+    alert(cpf); 
+    }  
+    </script>  
