@@ -7,6 +7,9 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
         
+        <script type="text/javascript" src="js/script.js"></script>
+
+        
         
     </head>
     <body>
@@ -45,11 +48,52 @@
                     <label for="cpf">CPF</label>
                     <input type="text" required name=cpf class="form-control" name="cpf" id="cpf" value="">
                 </div>
-                <div class="col-sm-12">
+               <div class="col-sm-12">
+                <br>
                     <label for="Sexo">Sexo</label>
-                    <input type="text" required name=sexo class="form-control" name="sexo" id="sexo" value="">
+                    <br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sexo" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Masculino</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sexo" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Feminino</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sexo" value="option3" >
+                        <label class="form-check-label" for="inlineRadio3">Indefinido</label>
+                      </div>
                 </div>
             </div>
+
+            <div class="row" style="margin-top: 10px">
+                <div class="col-sm-12">
+                    <label for="nascimento">Data de nascimento</label>
+                    <input type="date" required name=nascimento class="form-control" name="nascimento" id="nascimento" value="">
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 10px">
+                <div class="col-sm-12">
+                    <label for="civil">Estado Civil</label>
+                    <input type="text" required name=civil class="form-control" name="civil" id="civil" value="">
+                </div>
+            </div>
+            <div class="row" style="margin-top: 10px">
+                <div class="col-sm-12">
+                    <label for="escolaridade">Escolaridade</label>
+                    <input type="text" required name=escolaridade class="form-control" name="escolaridade" id="escolaridade" value="">
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 10px">
+                <div class="col-sm-12">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" required name=cidade class="form-control" name="cidade" id="cidade" value="">
+                </div>
+            </div>
+
             <div class="row" style="margin-top: 10px">
                 <div class="col-sm-12">
                     <label for="admissao">Data de admissão</label>
@@ -77,7 +121,19 @@
             <div class="row" style="margin-top: 10px">
                 <div class="col-sm-12">
                     <label for="tipo">Tipo de admissao</label>
-                    <input type="text" required name=tipo class="form-control" name="tipo" id="tipo" value="">
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="tipo" value="1º emprego" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          1º emprego
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="tipo" value="Reemprego">
+                        <label class="form-check-label" for="exampleRadios2">
+                          Reemprego
+                        </label>
+                      </div>
                 </div>
             </div>
             <div class="row" style="margin-top: 10px">
@@ -86,88 +142,78 @@
                     <input type="text" required name=carteira class="form-control" name="carteira" id="carteira" value="">
                 </div>
             </div>
-                
-            
-            
+            <div class="row" style="margin-top: 10px">
+                <div class="col-sm-12">
+                    <label for="carteira">UF carteira de trabalho</label>
                     
-            
+                    <select id="ufcarteira" class="form-control">
+
+                        
+                        <option>	Alagoas - AL	</option>
+                        <option>	Amapá - AP	</option>
+                        <option>	Amazonas - AM	</option>
+                        <option>	Bahia  - BA	</option>
+                        <option>	Ceará - CE	</option>
+                        <option>	Distrito Federal  - DF	</option>
+                        <option>	Espírito Santo - ES	</option>
+                        <option>	Goiás - GO	</option>
+                        <option>	Maranhão - MA	</option>
+                        <option>	Mato Grosso - MT	</option>
+                        <option>	Mato Grosso do Sul - MS	</option>
+                        <option>	Minas Gerais - MG	</option>
+                        <option>	Pará - PA	</option>
+                        <option>	Paraíba - PB	</option>
+                        <option>	Paraná - PR	</option>
+                        <option>	Pernambuco - PE	</option>
+                        <option>	Piauí - PI	</option>
+                        <option>	Rio de Janeiro - RJ	</option>
+                        <option>	Rio Grande do Norte - RN	</option>
+                        <option>	Rio Grande do Sul - RS	</option>
+                        <option>	Rondônia - RO	</option>
+                        <option>	Roraima - RR	</option>
+                        <option>	Santa Catarina - SC	</option>
+                        <option selected>	São Paulo - SP	</option>
+                        <option>	Sergipe - SE	</option>
+                        <option>	Tocantins - TO	</option>
+
+                      </select>
+                </div>
+            </div>
             <div class="row" style="margin-top: 15px">
                 <div class="col-sm-12">
                     <tr>
                         <td>Salvar arquivo como:</td>
                         <td><input id="salvarcomo"></input> </td>
-                        <td><button class="btn btn-dark" onclick=" salvartexto() ">Salvar</button></td>
+                        <td><button class="btn btn-dark" onclick=" salvartxt() ">Salvar</button></td>
                     </tr>
                     
                 </div>
             </div>
         
     </div>
-</div> 
+
+</div>
+<br><br>
+
+</div>
+<footer>
+
+    <div class="container-fluid footer text-center margin">
+        <p>Desenvolvido por Jonatas Boldrin</p:>
+        <a class="nav-link" href="#home">Voltar ao inicio</a>
+    </div>
+ 
+</footer>
+
+</body>
+</html>     
+
+            
+            
+                               
                         
             
             
-        </div>
-        <br><br>
         
 
-        <footer>
 
-            <div class="container-fluid footer text-center margin">
-                <p>Desenvolvido por Jonatas Boldrin</p:>
-                <a class="nav-link" href="#home">Voltar ao inicio</a>
-            </div>
-         
-        </footer>
-
-    </body>
-</html>
-
-
-<script type='text/javascript'>     
-
-    function salvartexto(){
-        
-        //declaração das variaveis 
-        var nome = document.getElementById("nome").value;
-        var cpf = document.getElementById("cpf").value;
-        var sexo = document.getElementById("sexo").value;
-        var admissao = document.getElementById("admissao").value;
-        var cargo = document.getElementById("cargo").value;
-        var escala = document.getElementById("escala").value;
-        var contrato = document.getElementById("contrato").value;
-        var tipo = document.getElementById("tipo").value;
-        var carteira = document.getElementById("carteira").value;
-        var textblob = new Blob(['Cadastro de Pessoa','\n\nNome:',nome,'\nCPF:',cpf,'\nSexo:',sexo,'\nData da admissao:',admissao,'\nCargo:',cargo,'\nEscala de trabalho:',escala,,'\nTipo de contrato:',contrato,'\nTipo de admissão:',tipo,'\nCarteira de trabalho:',carteira], {type:'text/plain'});
-        var salvarcomo = document.getElementById("salvarcomo").value;
-    
-        var downloadLink = document.createElement("a");
-        downloadLink.download = salvarcomo;
-        downloadLink.innerHTML = "Download File";
-    
-        if (window.webkitURL != null){
-    
-            downloadLink.href= window.webkitURL.createObjectURL(textblob);
-    
-        }else {
-    
-            downloadLink.href = windows.url.createObjectURL(textblod);
-            downloadLink.onclick = destroyClickedElement;
-            downloadLink.style.display = "none";
-            document.body.appendChild(downlodLink);
-    
-    
-        }
-    
-                downloadLink.click();
-    
-    
-    }
-    
-    function destroyClickedElement(event){
-    
-        document.body.removeChild(event.target);
-    }
-    
-    
-    </script> 
