@@ -1,14 +1,12 @@
 <!DOCTYPE html>
     <head>
-        <title>Simulador de Folha de pagamento</title>
+        <title>Simulador de Cadastro de pessoa</title>
         <meta charset="utf-8" lang="pt-br">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        
         
     </head>
     <body>
@@ -20,14 +18,14 @@
                 
             
                 <div class="#" id="home">
-                    <h5>Simulador de Folha de pagamento</h5>
+                    <h5>Simulador de Cadastro de pessoa</h5>
                 </div>   
         </nav>
 
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-              <h1 class="display-4">Simulação de folha de pagamento</h1>
-              <p class="lead">Simule a montagem de uma folha de pagamento.</p>
+              <h1 class="display-4">Simulação de cadastro de pessoa</h1>
+              <p class="lead">Simule o cadastro de um funcionário.</p>
             </div>
           </div>
           <br><br> 
@@ -54,8 +52,8 @@
             </div>
             <div class="row" style="margin-top: 10px">
                 <div class="col-sm-12">
-                    <label for="data">Data de admissão</label>
-                    <input type="date" required name=data class="form-control" name="data" id="data" value="">
+                    <label for="admissao">Data de admissão</label>
+                    <input type="date" required name=admissao class="form-control" name="admissao" id="admissao" value="">
                 </div>
             </div>
             <div class="row" style="margin-top: 10px">
@@ -95,7 +93,11 @@
             
             <div class="row" style="margin-top: 15px">
                 <div class="col-sm-12">
-                    <button onclick="getcube()" class="btn btn-primary">Salvar</button>
+                    <tr>
+                        <td>Salvar arquivo como:</td>
+                        <td><input id="salvarcomo"></input> </td>
+                        <td><button class="btn btn-dark" onclick=" salvartexto() ">Salvar</button></td>
+                    </tr>
                     
                 </div>
             </div>
@@ -122,11 +124,50 @@
 </html>
 
 
-<script type="text/javascript">  
-    function getcube(){  
-    var nome= document.getElementById("nome").value;  
-    var cpf= document.getElementById("cpf").value;  
-    alert(nome);  
-    alert(cpf); 
-    }  
-    </script>  
+<script type='text/javascript'>     
+
+    function salvartexto(){
+        
+        //declaração das variaveis 
+        var nome = document.getElementById("nome").value;
+        var cpf = document.getElementById("cpf").value;
+        var sexo = document.getElementById("sexo").value;
+        var admissao = document.getElementById("admissao").value;
+        var cargo = document.getElementById("cargo").value;
+        var escala = document.getElementById("escala").value;
+        var contrato = document.getElementById("contrato").value;
+        var tipo = document.getElementById("tipo").value;
+        var carteira = document.getElementById("carteira").value;
+        var textblob = new Blob(['Cadastro de Pessoa','\n\nNome:',nome,'\nCPF:',cpf,'\nSexo:',sexo,'\nData da admissao:',admissao,'\nCargo:',cargo,'\nEscala de trabalho:',escala,,'\nTipo de contrato:',contrato,'\nTipo de admissão:',tipo,'\nCarteira de trabalho:',carteira], {type:'text/plain'});
+        var salvarcomo = document.getElementById("salvarcomo").value;
+    
+        var downloadLink = document.createElement("a");
+        downloadLink.download = salvarcomo;
+        downloadLink.innerHTML = "Download File";
+    
+        if (window.webkitURL != null){
+    
+            downloadLink.href= window.webkitURL.createObjectURL(textblob);
+    
+        }else {
+    
+            downloadLink.href = windows.url.createObjectURL(textblod);
+            downloadLink.onclick = destroyClickedElement;
+            downloadLink.style.display = "none";
+            document.body.appendChild(downlodLink);
+    
+    
+        }
+    
+                downloadLink.click();
+    
+    
+    }
+    
+    function destroyClickedElement(event){
+    
+        document.body.removeChild(event.target);
+    }
+    
+    
+    </script> 
